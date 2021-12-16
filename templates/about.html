@@ -1,11 +1,13 @@
 {% extends 'base.html' %}
 {% block title %}Home{% endblock title %}
 {% block body %}
-
+    {% load static %}
     <h1>This is our <b>About Page</b></h1>
     <p>welcome back, {{name}} </p>
 
     <a href="/">home</a>
     <a href={% url 'contact' %}>contact</a>
+    
+    <img src={% static 'login.png' %} alt="">
 
 {% endblock body %}

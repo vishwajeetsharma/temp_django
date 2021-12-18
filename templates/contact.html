@@ -1,11 +1,16 @@
-{% extends 'base.html' %}
-{% block title %}Home{% endblock title %}
-{% block body %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shoes</title>
+</head>
+<body>
+    
+    <h1>This is shoes page</h1>
+    <p>Shoe Name: {{ shoe_name }}</p> <br>
+    <p>Shoe Price: {{ price }}</p>
 
-    <h1>This is our <b>Contact Page</b></h1>
-    <p>welcome back, {{name}} </p>
-
-    <a href={% url 'about' %}>about</a>
-    <a href="/">home</a>
-
-{% endblock body %}
+</body>
+</html>

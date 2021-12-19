@@ -9,8 +9,18 @@
 <body>
     
     <h1>This is shoes page</h1>
-    <p>Shoe Name: {{ shoe_name }}</p> <br>
-    <p>Shoe Price: {{ price }}</p>
 
+
+    <form action={% url 'shoes' %} method="post">
+        {% csrf_token %}
+        Shoe Name : <input type="text" name="shoe_name" id="shoe_name"><br>
+        Price : <input type="number" name="price"> <br>
+        Shoe Colour : <input type="text" name="shoe_colour"><br> <br>
+        Shoe Description : <textarea name="shoe_description" id="shoe_description" cols="30" rows="10"></textarea> <br>
+        <input type="submit" value="Save">
+    </form>
+    {% for shoe in shoe_dict %}
+        <p>{{shoe.shoe_name}} &nbsp; {{shoe.price}} &nbsp; {{shoe.shoe_colour}} &nbsp; {{shoe.shoe_description}} &nbsp; {{shoe.available_now}}</p>
+    {% endfor %}
 </body>
 </html>

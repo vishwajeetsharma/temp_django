@@ -6,7 +6,7 @@ class Shoe(models.Model):
     price = models.IntegerField()
     shoe_colour = models.CharField(max_length=100)
     shoe_description = models.TextField()
-    available_now = models.BooleanField()
+    available_now = models.BooleanField(default=True)
 
     def __str__(self):
-        return self.shoe_name+" - "+self.shoe_colour+" - "+str(self.available_now)
+        return self.shoe_name+" - "+self.shoe_colour+" - "+str(self.id)

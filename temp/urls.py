@@ -9,5 +9,6 @@ urlpatterns = [
     path('about/', views.about, name="about"),
     path('contact/', views.contact, name="contact"),
     path('vjpn/', include('vjpn.urls')),
-    path('shoe/', views.shoes, name="shoes")
+    path('shoe/', views.shoes, name="shoes"),
+    path('blog/<str:name>', views.blog, name="blog")
 ]

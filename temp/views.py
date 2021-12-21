@@ -25,3 +25,9 @@ def shoes(request):
         shoes = Shoe.objects.all()
         # shoes = Shoe.objects.filter(available_now=True)
         return render(request, "contact.html", {"shoe_dict":shoes})
+
+def blog(request, name):
+    context={
+        "name":name
+    }
+    return render(request, "blog.html", context)
